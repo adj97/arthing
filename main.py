@@ -1,26 +1,21 @@
-import random
+import circles
 
-import matplotlib.pyplot as plt
-import numpy as np
+basepath = "images/"
 
-n = 10
-b = 5  # b*b square
 
-x_off = []
-y_off = []
+def main():
+    script = "circles"
+    executed = False
 
-for x in range(b):
-    for y in range(b):
-        x_off.append(2*x)
-        y_off.append(2*y)
+    if script == "circles":
+        circles.circle()
+        executed = True
 
-for i in range(b*b):
-    x = np.random.rand(n) + x_off[i]
-    y = np.random.rand(n) + y_off[i]
-    C = np.random.rand(n, 3)
-    S = [2**p for p in range(len(x))]
-    plt.scatter(x, y, c=C, s=S, alpha=0.7, edgecolors='none')
+    if executed:
+        print("Executed script: " + script)
+    else:
+        print("No matching script")
 
-plt.axis('off')
 
-plt.savefig('images/multicoloured_overlap.pdf')
+if __name__ == "__main__":
+    main()
