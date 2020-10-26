@@ -22,6 +22,6 @@ def circle(n=10, b=5):
 
     plt.axis('off')
 
-    name = "test2"
+    name = "test3"
 
     plt.savefig(main.basepath + name + ".pdf")

@@ -1,18 +1,18 @@
-import circles
+from Scripts import circles
+from Scripts import sinelines
 
 basepath = "images/"
 
 
 def main():
-    script = "circles"
-    executed = False
+    script = "sineline"
 
     if script == "circles":
         circles.circle()
-        executed = True
 
-    if executed:
-        print("Executed script: " + script)
+    elif script == "sineline":
+        sinelines.sineline()
+
     else:
         print("No matching script")
 
